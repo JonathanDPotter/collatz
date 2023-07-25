@@ -1,0 +1,107 @@
+:root {
+  --white: #fff;
+  --black: #1c2541;
+  --primary: #6fffe9;
+  --secondary: #5bc0be;
+  --tertiary: #3a506b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+header,
+main,
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+header {
+  height: 10vh;
+  background-color: var(--primary);
+  color: var(--tertiary);
+  font-size: 2rem;
+}
+
+main {
+  flex: 1;
+  background-color: var(--black);
+  color: var(--white);
+  gap: 2rem;
+}
+
+main fieldset {
+  border: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+main input {
+  height: 3rem;
+  padding: 0 1rem;
+  border-radius: 400px;
+  border: 1px solid var(--primary);
+  text-align: center;
+  margin-left: 1rem;
+  background-color: inherit;
+  color: var(--white);
+  font-size: inherit;
+  outline: none;
+}
+
+main input:focus {
+  box-shadow: 0 0 1rem var(--primary);
+}
+
+main input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+main input[type="submit"] {
+  background-color: var(--primary);
+  color: var(--tertiary);
+  border: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+main h2 {
+  font-size: 2rem;
+}
+
+footer {
+  height: 8vh;
+  background-color: var(--secondary);
+}
+
+footer a {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  color: inherit;
+}
+
+@media screen and (max-width: 800px) {
+  main fieldset {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main input {
+    width: min(100%, 450px);
+  }
+}
